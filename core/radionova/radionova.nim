@@ -128,9 +128,9 @@ proc getNovaData*(nova: var RadioNova) =
 
 proc display*(nova: var RadioNova) =
   echo "[\u266b]" & fmt" artist: {nova.artist} - track: {nova.track}"
-  if nova.spotifyUrl != "": echo nova.spotifyUrl
-  if nova.deezerUrl != "": echo nova.deezerUrl
-  if nova.appleUrl != "":  echo nova.appleUrl
+  if nova.spotifyUrl != "": echo fmt"    {nova.spotifyUrl}"
+  if nova.deezerUrl != "": echo fmt"    {nova.deezerUrl}"
+  if nova.appleUrl != "":  echo fmt"    {nova.appleUrl}"
 
 proc startPlayer*() =
   let
